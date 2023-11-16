@@ -3,12 +3,15 @@ import java.util.*;
 
 public  record RecordLogger(String name) implements Logger {
 
-	
-	
 	@Override
-	public String logMessage(String message) {
+	public void logMessage(LoggingFunction loggingFunction) {
+		loggingFunction.log(name + ": This is a log message from RecordLogger");
 		
-		return message + " " + this.name;
 	}
+
+	
+	
+	
+	
 
 }
